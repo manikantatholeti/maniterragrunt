@@ -16,7 +16,7 @@ pipeline {
                   dir('/var/lib/jenkins/workspace/terragrunt-testv2/env/dev/tde') {
                         sh 'terragrunt init'
                         sh 'terragrunt plan'
-                        sh 'terragrunt apply -auto-approve'
+                        sh 'terragrunt destroy -auto-approve'
                     }
                 }
               }
