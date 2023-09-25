@@ -6,13 +6,20 @@ terraform {
   source = "git@github.com:manikantatholeti/maniterragrunt.git//terraform-templates/jenkins/"
   #source = "../../../terraform-templates/jenkins"
 
-backend "s3" {
+remote_state {
+  backend = "s3"
+  generate = {
+    path      = "backend.tf"
+    if_exists = "overwrite"
+  }
+  config = {
     bucket         = "vtsl-automation-mgmt"
     key            = "terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
     dynamodb_table = "vtsl-automation-table-mgmt"
   }
+ }
 }
 
 
