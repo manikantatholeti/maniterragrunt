@@ -1,12 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket         = "vtsl-automation-mgmt"
-    key            = "terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "vtsl-automation-table-mgmt"
-  }
-}
 ################################################################################
 # Source Path
 ################################################################################
@@ -14,6 +5,14 @@ terraform {
 terraform {
   source = "git@github.com:manikantatholeti/maniterragrunt.git//terraform-templates/jenkins/"
   #source = "../../../terraform-templates/jenkins"
+
+backend "s3" {
+    bucket         = "vtsl-automation-mgmt"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "vtsl-automation-table-mgmt"
+  }
 }
 
 
