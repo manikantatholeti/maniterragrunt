@@ -5,7 +5,7 @@
 terraform {
   source = "git@github.com:manikantatholeti/maniterragrunt.git//terraform-templates/jenkins/"
   #source = "../../../terraform-templates/jenkins"
-
+}
 remote_state {
   backend = "s3"
   generate = {
@@ -20,7 +20,7 @@ remote_state {
     dynamodb_table = "vtsl-automation-table-mgmt"
   }
  }
-}
+
 
 
 ################################################################################
