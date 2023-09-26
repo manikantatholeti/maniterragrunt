@@ -8,7 +8,7 @@ remote_state {
     bucket         = "vtsl-automation-mgmt"
     key            = "${path_relative_to_include()}/terraform.tfstate"
     region         = "us-east-1"
-    encrypt        = false
+    encrypt        = true
     dynamodb_table = "vtsl-automation-table-mgmt"
   }
 }
