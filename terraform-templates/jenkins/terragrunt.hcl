@@ -2,11 +2,11 @@ include "root" {
   path = find_in_parent_folders()
   expose = true
 }
-remote_state {
-  backend = "s3"
-  config = {
+
+terraform {
+  backend "s3" {
     bucket         = "vtsl-automation-mgmt"
-    key            = "${path_relative_to_include()}/terraform.tfstate"
+    key            = "terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
     dynamodb_table = "vtsl-automation-table-mgmt"
