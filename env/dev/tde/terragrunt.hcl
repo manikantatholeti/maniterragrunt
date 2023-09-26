@@ -20,3 +20,4 @@ inputs = {
   iam_role_profile = "mani-iamprofile"
   iam_role_policy = "mani-iampolicy"
 }
+
