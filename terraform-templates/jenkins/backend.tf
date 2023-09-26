@@ -1,5 +1,6 @@
-terraform {
-  backend "s3" {
+remote_state {
+  backend = "s3"
+  config = {
     bucket         = "test-bucket-terragrunt"
     key            = "terraform.tfstate"
     region         = "us-east-1"
