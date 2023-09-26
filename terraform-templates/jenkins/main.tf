@@ -15,12 +15,3 @@ module "jenkins_role" {
   iam_role_profile        = var.iam_role_profile
   iam_role_policy         = var.iam_role_policy
 }
-terraform {
-  backend "s3" {
-    bucket         = "test-bucket-terragrunt"
-    key            = "terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "vtsl-automation-table-mgmt"
-  }
-}
