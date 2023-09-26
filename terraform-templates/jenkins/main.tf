@@ -17,7 +17,7 @@ module "jenkins_role" {
 }
 terraform {
   backend "s3" {
-    bucket         = "vtsl-automation-mgmt"
+    bucket         = "test-bucket-terragrunt"
     key            = "terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
