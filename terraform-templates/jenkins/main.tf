@@ -1,12 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket         = "vtsl-automation-mgmt"
-    key            = "terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "vtsl-automation-table-mgmt"
-  }
-}
 module "jenkins_role" {
   #source = "../../terraform-modules/iam_role"
   source = "git@github.com:manikantatholeti/maniterragrunt.git//terraform-modules/iam_role"
