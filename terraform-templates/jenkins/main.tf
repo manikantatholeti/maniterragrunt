@@ -1,6 +1,6 @@
 module "jenkins_role" {
-  #source = "../../terraform-modules/iam_role"
-  source = "git@github.com:manikantatholeti/maniterragrunt.git//terraform-modules/iam_role"
+  source = "../../terraform-modules/iam_role"
+  #source = "git@github.com:manikantatholeti/maniterragrunt.git//terraform-modules/iam_role"
 
   trusted_role_services = [
     "ec2.amazonaws.com"
