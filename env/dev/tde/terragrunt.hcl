@@ -1,10 +1,11 @@
+
 ################################################################################
 # Source Path
 ################################################################################
 
 terraform {
-  source = "git@github.com:manikantatholeti/maniterragrunt.git//terraform-templates/jenkins/"
-  #source = "../../..//terraform-templates/jenkins"
+  #source = "git@github.com:manikantatholeti/maniterragrunt.git//terraform-templates/jenkins/"
+  source = "../../..//terraform-templates/jenkins"
 }
 ################################################################################
 # Dependancy Path (If Any)
