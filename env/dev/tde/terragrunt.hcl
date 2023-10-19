@@ -9,7 +9,7 @@ terraform {
     key            = "test-iamrole/terraform.tfstate"
     region         = "us-east-1"
     profile        = "default"
-    encrypt        = true
+    encrypt        = false
   }
 }
 EOF
