@@ -1,4 +1,19 @@
-
+generate "backend" {
+  path      = "backend.tf"
+  if_exists = "overwrite_terragrunt"
+  contents = <<EOF
+terraform {
+  backend "s3" {
+    bucket         = "fiserv-terraform-state-bucket-new" 
+    dynamodb_table = "fiserv-terraform-state-lock-new"
+    key            = "test-iamrole/terraform.tfstate"
+    region         = "us-east-1"
+    profile        = "default"
+    encrypt        = true
+  }
+}
+EOF
+}
 ################################################################################
 # Source Path
 ################################################################################
