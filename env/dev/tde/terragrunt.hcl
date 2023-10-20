@@ -33,7 +33,7 @@ terraform {
 ################################################################################
 inputs = {
   iam_role_name = "mani-iamrole"
-  iam_role_profile = "mani-iamprofile"
+  iam_role_profile = "mani-iamprofile2"
   iam_role_policy = "mani-iampolicy"
 }
 
